@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Audit Co. - Get Your AI Implementation Audit in 24 Hours</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            line-height: 1.6;
+            color: #1a1a2e;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: white;
+            padding: 100px 0;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .hero p {
+            font-size: 1.5rem;
+            color: #4a4a68;
+            margin-bottom: 40px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .stat-box {
+            background: #f8f9ff;
+            border: 2px solid #667eea;
+            border-radius: 12px;
+            padding: 30px;
+            margin: 40px auto;
+            max-width: 600px;
+        }
+        
+        .stat-box h3 {
+            font-size: 2.5rem;
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 18px 40px;
+            font-size: 1.3rem;
+            font-weight: 700;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(102, 126, 234, 0.6);
+        }
+        
+        /* Problem Section */
+        .problem {
+            background: #f8f9ff;
+            padding: 80px 0;
+        }
+        
+        .problem h2 {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 50px;
+            color: #1a1a2e;
+        }
+        
+        .problem-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .problem-card {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+        
+        .problem-card h3 {
+            color: #667eea;
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+        
+        /* Solution Section */
+        .solution {
+            background: white;
+            padding: 80px 0;
+        }
+        
+        .solution h2 {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .solution p {
+            text-align: center;
+            font-size: 1.2rem;
+            color: #4a4a68;
+            max-width: 800px;
+            margin: 0 auto 50px;
+        }
+        
+        .solution-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+        
+        .solution-card {
+            text-align: center;
+            padding: 30px;
+        }
+        
+        .solution-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+        
+        /* Pricing Section */
+        .pricing {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 80px 0;
+        }
+        
+        .pricing h2 {
+            font-size: 2.5rem;
+            text-align: center;
+            color: white;
+            margin-bottom: 50px;
+        }
+        
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .pricing-card {
+            background: white;
+            border-radius: 16px;
+            padding: 40px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        
+        .pricing-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .pricing-card.featured {
+            border: 4px solid #ffd700;
+            position: relative;
+        }
+        
+        .pricing-card.featured::before {
+            content: 'MOST POPULAR';
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #ffd700;
+            color: #1a1a2e;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-weight: 700;
+            font-size: 0.9rem;
+        }
+        
+        .price {
+            font-size: 3.5rem;
+            font-weight: 800;
+            color: #667eea;
+            margin: 20px 0;
+        }
+        
+        .price span {
+            font-size: 1rem;
+            color: #4a4a68;
+        }
+        
+        .features {
+            list-style: none;
+            margin: 30px 0;
+            text-align: left;
+        }
+        
+        .features li {
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .features li:last-child {
+            border-bottom: none;
+        }
+        
+        .features li::before {
+            content: '✓';
+            color: #667eea;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        
+        .pricing-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px 30px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            text-decoration: none;
+            border-radius: 50px;
+            width: 100%;
+            transition: transform 0.3s ease;
+        }
+        
+        .pricing-button:hover {
+            transform: scale(1.05);
+        }
+        
+        /* Social Proof */
+        .social-proof {
+            background: #f8f9ff;
+            padding: 80px 0;
+        }
+        
+        .social-proof h2 {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .case-study {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+        
+        .case-study h3 {
+            color: #667eea;
+            margin-bottom: 15px;
+        }
+        
+        .case-study .result {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #764ba2;
+            margin: 15px 0;
+        }
+        
+        /* FAQ Section */
+        .faq {
+            background: white;
+            padding: 80px 0;
+        }
+        
+        .faq h2 {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .faq-item {
+            max-width: 800px;
+            margin: 0 auto 20px;
+            background: #f8f9ff;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+        
+        .faq-question {
+            padding: 25px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .faq-answer {
+            padding: 0 25px 25px;
+            color: #4a4a68;
+            line-height: 1.8;
+        }
+        
+        /* Footer */
+        footer {
+            background: #1a1a2e;
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+        }
+        
+        footer p {
+            opacity: 0.8;
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero p {
+                font-size: 1.2rem;
+            }
+            
+            .stat-box h3 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Get Your AI Implementation Audit in 24 Hours</h1>
+            <p>Stop experimenting. Start implementing. Get a customized AI roadmap that actually works for your business.</p>
+            
+            <div class="stat-box">
+                <h3>66%</h3>
+                <p>of companies are stuck in AI experimentation without real implementation</p>
+            </div>
+            
+            <a href="#pricing" class="cta-button">Get Your Audit Now</a>
+        </div>
+    </section>
+    
+    <!-- Problem Section -->
+    <section class="problem">
+        <div class="container">
+            <h2>Why Most AI Initiatives Fail</h2>
+            <div class="problem-grid">
+                <div class="problem-card">
+                    <h3>🔍 Tool Overload</h3>
+                    <p>Too many AI tools, no clear strategy. You're subscribed to 10+ platforms but none are delivering ROI.</p>
+                </div>
+                <div class="problem-card">
+                    <h3>📊 Implementation Gap</h3>
+                    <p>You know AI can help, but don't know where to start. Pilots never make it to production.</p>
+                </div>
+                <div class="problem-card">
+                    <h3>💸 Wasted Budget</h3>
+                    <p>Spending on AI tools without measurable outcomes. Your CFO is asking tough questions.</p>
+                </div>
+                <div class="problem-card">
+                    <h3>🎯 Missing Framework</h3>
+                    <p>No systematic approach to identify high-impact use cases. Random experiments instead of strategy.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Solution Section -->
+    <section class="solution">
+        <div class="container">
+            <h2>Our Solution</h2>
+            <p>We deliver a comprehensive AI implementation audit with actionable playbook in 24 hours</p>
+            
+            <div class="solution-grid">
+                <div class="solution-card">
+                    <div class="solution-icon">⚡</div>
+                    <h3>24-Hour Turnaround</h3>
+                    <p>Get your complete audit and roadmap within one business day</p>
+                </div>
+                <div class="solution-card">
+                    <div class="solution-icon">🎯</div>
+                    <h3>Customized Strategy</h3>
+                    <p>Tailored recommendations based on your specific business context</p>
+                </div>
+                <div class="solution-card">
+                    <div class="solution-icon">📋</div>
+                    <h3>Action Plan</h3>
+                    <p>30-day implementation roadmap with clear milestones and KPIs</p>
+                </div>
+                <div class="solution-card">
+                    <div class="solution-icon">🛠️</div>
+                    <h3>Tool Stack</h3>
+                    <p>Exact tools and integrations you need, nothing more, nothing less</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Pricing Section -->
+    <section class="pricing" id="pricing">
+        <div class="container">
+            <h2>Choose Your Audit Package</h2>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <h3>Starter</h3>
+                    <div class="price">$97<span>/audit</span></div>
+                    <ul class="features">
+                        <li>Current AI Stack Analysis</li>
+                        <li>Gap Identification Report</li>
+                        <li>5 High-Impact Use Cases</li>
+                        <li>Basic Tool Recommendations</li>
+                        <li>Email Support</li>
+                    </ul>
+                    <!-- UPDATE: Replace with your actual Gumroad link -->
+                    <a href="https://gumroad.com/l/ai-audit-starter" class="pricing-button">Get Started</a>
+                </div>
+                
+                <div class="pricing-card featured">
+                    <h3>Professional</h3>
+                    <div class="price">$297<span>/audit</span></div>
+                    <ul class="features">
+                        <li>Everything in Starter</li>
+                        <li>Competitive AI Analysis</li>
+                        <li>15 Priority Use Cases</li>
+                        <li>30-Day Implementation Plan</li>
+                        <li>ROI Projections</li>
+                        <li>Priority Email Support</li>
+                    </ul>
+                    <!-- UPDATE: Replace with your actual Gumroad link -->
+                    <a href="https://gumroad.com/l/ai-audit-pro" class="pricing-button">Get Started</a>
+                </div>
+                
+                <div class="pricing-card">
+                    <h3>Enterprise</h3>
+                    <div class="price">$997<span>/audit</span></div>
+                    <ul class="features">
+                        <li>Everything in Professional</li>
+                        <li>Department-Specific Roadmaps</li>
+                        <li>Integration Architecture</li>
+                        <li>Change Management Guide</li>
+                        <li>30-Day Email Consultation</li>
+                        <li>Team Training Resources</li>
+                    </ul>
+                    <!-- UPDATE: Replace with your actual Gumroad link -->
+                    <a href="https://gumroad.com/l/ai-audit-enterprise" class="pricing-button">Get Started</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Social Proof Section -->
+    <section class="social-proof">
+        <div class="container">
+            <h2>Success Stories</h2>
+            
+            <div class="case-study">
+                <h3>TechStart Inc. - SaaS Company (50 employees)</h3>
+                <p><strong>Challenge:</strong> Using 8 different AI tools with no integration. Marketing and sales teams working in silos.</p>
+                <div class="result">Result: 40% reduction in tool costs, 3x faster content production, unified customer data</div>
+                <p>"The audit identified $12k/year in wasted subscriptions and gave us a clear path to integrate our stack. ROI in week 2."</p>
+                <p><em>- Sarah Chen, COO</em></p>
+            </div>
+            
+            <div class="case-study">
+                <h3>GreenLeaf Consulting - Professional Services (25 employees)</h3>
+                <p><strong>Challenge:</strong> Manual research and report writing consuming 60% of consultant time.</p>
+                <div class="result">Result: 20 hours/week saved per consultant, 50% faster project delivery</div>
+                <p>"We implemented the recommended AI workflow in 3 weeks. Now our team focuses on strategy, not data gathering."</p>
+                <p><em>- Marcus Rodriguez, Managing Partner</em></p>
+            </div>
+            
+            <div class="case-study">
+                <h3>RetailMax - E-commerce (200 employees)</h3>
+                <p><strong>Challenge:</strong> Customer support overwhelmed, product descriptions taking weeks to create.</p>
+                <div class="result">Result: 70% faster product launches, 45% reduction in support tickets</div>
+                <p>"The Enterprise audit gave us a department-by-department rollout plan. Customer satisfaction up 35%."</p>
+                <p><em>- Jennifer Park, VP Operations</em></p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- FAQ Section -->
+    <section class="faq">
+        <div class="container">
+            <h2>Frequently Asked Questions</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    How long does the audit take?
+                    <span>▼</span>
+                </div>
+                <div class="faq-answer">
+                    <p>You'll receive your complete AI implementation audit within 24 hours of submitting your intake questionnaire. We prioritize quality while maintaining speed.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    What do I need to provide?
+                    <span>▼</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Just complete our 10-minute intake questionnaire covering your current tools, team size, industry, and goals. No technical documentation required.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    Is this just a generic report?
+                    <span>▼</span>
+                </div>
+                <div class="faq-answer">
+                    <p>No. Every audit is customized based on your specific business context, industry, current stack, and goals. We don't use templates.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    What format will I receive?
+                    <span>▼</span>
+                </div>
+                <div class="faq-answer">
+                    <p>You'll get a comprehensive Notion document with your audit, plus downloadable PDF. Professional and Enterprise tiers include implementation templates.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    Do you offer refunds?
+                    <span>▼</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Yes, if you're not satisfied with your audit, we offer a full refund within 7 days. We're confident you'll find immediate value.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    Can I upgrade later?
+                    <span>▼</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Absolutely. If you start with Starter and want Professional or Enterprise, we'll credit your purchase toward the upgrade.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 AI Audit Co. All rights reserved.</p>
+            <p>Helping companies move from AI experimentation to implementation.</p>
+        </div>
+    </footer>
+    
+    <script>
+        // Smooth scroll for CTA buttons
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Simple FAQ toggle
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const answer = question.nextElementSibling;
+                const span = question.querySelector('span');
+                
+                if (answer.style.display === 'block') {
+                    answer.style.display = 'none';
+                    span.textContent = '▼';
+                } else {
+                    answer.style.display = 'block';
+                    span.textContent = '▲';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
